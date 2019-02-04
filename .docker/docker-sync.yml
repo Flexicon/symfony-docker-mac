@@ -1,0 +1,14 @@
+version: '2'
+
+options:
+  compose-file-path: 'docker-compose.yml'
+  verbose: true
+
+syncs:
+  app-sync:
+    src: '../'
+    sync_excludes:
+      - '.git'
+      - 'var/cache/*'
+      - 'var/logs'
+      - 'var/sessions'

@@ -13,7 +13,8 @@ class FooController extends AbstractController
     public function index()
     {
         return $this->json([
-            'message' => 'Hello world!',
+            'message' => 'Hello, world!',
+            'foo' => 'bar',
         ]);
     }
 }
