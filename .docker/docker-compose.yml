@@ -7,7 +7,7 @@ services:
     volumes:
       # - '${API_SOURCE_PATH}:/app' # default docker volume sync
       # - '${API_SOURCE_PATH}:/app:cached' # docker caching layer
-      - app-sync:/app:nocopy # macOS: uncomment for docker-sync
+      - app-sync:/app:nocopy # macOS: docker-sync
     ports:
       - '${API_WEB_PORT}:80'
     depends_on:
