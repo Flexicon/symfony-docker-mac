@@ -1,0 +1,14 @@
+version: '2'
+
+options:
+  compose-file-path: 'docker-compose.yml'
+  verbose: true
+
+syncs:
+  app-sync: # the name of your sync container. What you choose doesn't matter however it's important that it is unique, it can't be the same as your app contianer for example.
+    src: '../'
+    sync_excludes: # what shouldn't be synced between host and container
+      - '.git'
+      - 'var/cache/*'
+      - 'var/logs'
+      - 'var/sessions'
