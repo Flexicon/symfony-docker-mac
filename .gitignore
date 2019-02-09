@@ -13,3 +13,4 @@
 ###< symfony/web-server-bundle ###
 
 .idea/
+.docker/.docker-sync/

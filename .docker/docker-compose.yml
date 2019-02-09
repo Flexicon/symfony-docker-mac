@@ -21,7 +21,20 @@ services:
       # - '${API_SOURCE_PATH}:/app:cached' # docker caching layer
       - app-sync:/app:nocopy # macOS: docker-sync
 
+  db:
+    image: mysql:5.7
+    volumes:
+      - mysql:/var/lib/mysql
+    ports:
+      - '${DB_PORT}:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: foobar
+      MYSQL_USER: foo
+      MYSQL_PASSWORD: bar_pass
+
 # macOS: for docker-sync
 volumes:
   app-sync:
     external: true
+  mysql:

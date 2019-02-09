@@ -10,7 +10,9 @@ $ cd .docker
 $ docker-sync-stack start
 ```
 
-If everything went okay, then the app should be listening on `http://localhost:8500` and there should be an example endpoint `/foo` available.
+If everything went okay, then the app should be listening on `http://localhost:8500`
+
+Also, there should be 2 example endpoints available: `/foo` and `/todo` with static and persisted data respectively.
 
 Stats
 ---
